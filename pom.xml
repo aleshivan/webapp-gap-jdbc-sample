@@ -10,8 +10,9 @@
 
     <properties>
         <appengine.app.version>1</appengine.app.version>
-        <appengine.target.version>1.7.5</appengine.target.version>
+        <appengine.target.version>1.9.10</appengine.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <appengine.app.projectid>southern-camera-669</appengine.app.projectid>
     </properties>
 
     <dependencies>
@@ -63,7 +64,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.3</version>
+                <version>2.4</version>
                 <configuration>
                     <archiveClasses>true</archiveClasses>
                     <webResources>
@@ -81,6 +82,9 @@
                 <groupId>com.google.appengine</groupId>
                 <artifactId>appengine-maven-plugin</artifactId>
                 <version>${appengine.target.version}</version>
+                <configuration>
+                    <enableJarClasses>false</enableJarClasses>
+                </configuration>
             </plugin>
         </plugins>
     </build>
